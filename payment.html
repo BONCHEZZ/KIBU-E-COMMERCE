@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #eef2f7; margin: 0; padding: 0; }
+    .container {
+      max-width: 500px; margin: 50px auto; background: #fff;
+      padding: 25px; border-radius: 12px; text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 { margin-bottom: 15px; }
+    button {
+      display: block; width: 80%; margin: 15px auto; padding: 12px;
+      font-size: 16px; border: none; border-radius: 6px; cursor: pointer;
+    }
+    .mpesa { background: #34a853; color: white; }
+    .paypal { background: #003087; color: white; }
+    .mpesa:hover { background: #2c7c41; }
+    .paypal:hover { background: #00215e; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Pay Hosting Fee</h2>
+    <p>Hosting fee: <strong>$10</strong></p>
+    <p>Please choose your preferred payment method:</p>
+
+    <form action="payment_success.html" method="get">
+      <button type="submit" class="mpesa">Pay with M-Pesa</button>
+    </form>
+
+    <form action="payment_success.html" method="get">
+      <button type="submit" class="paypal">Pay with PayPal</button>
+    </form>
+
+    <form action="payment_failed.html" method="get">
+      <button type="submit" style="background:#ff4d4d; color:white;">Simulate Failed Payment</button>
+    </form>
+  </div>
+
+</body>
+</html>

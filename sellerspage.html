@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seller Product Upload</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+    }
+    header {
+      background: #1473d3;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #444;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: greenyellow;
+    }
+    .note {
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seller Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <h2>Upload Your Product</h2>
+    <form action="payment.html" method="post" enctype="multipart/form-data">
+      
+      <label for="name">Product Name:</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Stylish Sneakers" required>
+
+      <label for="desc">Description:</label>
+      <textarea id="desc" name="description" rows="4" placeholder="Enter product details..." required></textarea>
+
+      <label for="price">Price (KSH):</label>
+      <input type="number" id="price" name="price" step="0.01" required>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Category --</option>
+        <option>Fashion</option>
+        <option>Electronics</option>
+        <option>Food</option>
+        <option>Home & Living</option>
+        <option>Other</option>
+      </select>
+
+      <label for="image">Upload Product Image:</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <label for="document">Upload Business Document:</label>
+      <input type="file" id="document" name="document" accept=".pdf,.jpg,.png" required>
+      <p class="note">Accepted: PDF, JPG, PNG</p>
+
+      <button type="submit"> <a href="payment.html"></a>Submit & Continue to Payment</button>
+    </form>
+  </div>
+
+</body>
+</html>
